@@ -20,4 +20,26 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals([1=>'Sven',2=>'Hans',5=>'Peter'], ArrayUtils::column($array, 'name', 'id'));
     $this->assertEquals(count(ArrayUtils::column($array, 'id')), 3);
   }
+
+  /**
+   * Test for Schwaen\Stdlib\ArrayUtils::hasStringKeys
+   */
+  public function testHasStringKeys() {
+    $array1 = ['a'=>true,2=>true];
+    $array2 = ['test', 'test', 'test'];
+    $this->assertEquals(true, ArrayUtils::hasStringKeys($array1, false, false));
+    $this->assertEquals(false, ArrayUtils::hasStringKeys($array1, true, false));
+    $this->assertEquals(false, ArrayUtils::hasStringKeys($array2));
+  }
+
+  /**
+   * Test for Schwaen\Stdlib\ArrayUtils::hasStringKeys
+   */
+  public function testHasIntegerKeys() {
+    $array1 = ['a'=>true,2=>true];
+    $array2 = ['test', 'test', 'test'];
+    $this->assertEquals(true, ArrayUtils::hasIntegerKeys($array1, false));
+    $this->assertEquals(false, ArrayUtils::hasIntegerKeys($array1, true));
+    $this->assertEquals(true, ArrayUtils::hasIntegerKeys($array2));
+  }
 }

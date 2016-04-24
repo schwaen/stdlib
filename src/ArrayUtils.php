@@ -6,7 +6,7 @@ namespace Schwaen\Stdlib;
  */
 class ArrayUtils {
   /**
-   * column
+   * Return the values from a single column in the input array
    *
    * @access public
    * @static
@@ -34,4 +34,41 @@ class ArrayUtils {
     }
     return $arr;
   }
+
+  /**
+   * Test whether an array contains one or more string keys
+   *
+   * @param array $input
+   * @param bool $only
+   * @param bool $allow_empty Should an empty array() return true
+   * @return bool
+   */
+  public static function hasStringKeys($input, $only = false, $allow_empty = false) {
+    if(!is_array($input)) {
+      return false;
+    }
+    if(!$input) {
+      return $allow_empty;
+    }
+    return count(array_filter(array_keys($input), 'is_string')) > ($only ? count($input) : 0);
+  }
+
+  /**
+   * Test whether an array contains one or more integer keys
+   *
+   * @param array $input
+   * @param bool $only
+   * @param bool $allow_empty    Should an empty array() return true
+   * @return bool
+   */
+  public static function hasIntegerKeys($input, $only = false, $allow_empty = false) {
+    if (!is_array($input)) {
+      return false;
+    }
+    if (!$input) {
+      return $allow_empty;
+    }
+    return count(array_filter(array_keys($input), 'is_int')) > ($only ? count($input) : 0);
+  }
+
 }
