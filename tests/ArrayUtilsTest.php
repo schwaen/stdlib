@@ -18,5 +18,6 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals(['Sven','Hans','Peter'], ArrayUtils::column($array, 'name'));
     $this->assertEquals([1,2,5], ArrayUtils::column($array, 'id'));
     $this->assertEquals([1=>'Sven',2=>'Hans',5=>'Peter'], ArrayUtils::column($array, 'name', 'id'));
+    $this->assertEquals(count(ArrayUtils::column($array, 'id')), 3);
   }
 }
