@@ -26,11 +26,11 @@ trait SingletonTrait {
   /**
    * private constructor for calling an optional init-Method
    */
-  final private function __construct(){
+  final private function __construct() {
     $this->init();
   }
 
   private function init() {}
-  final private function __clone(){}
-  final private function __wakeup(){}
+  final private function __clone() {}
+  final private function __wakeup() {}
 }
