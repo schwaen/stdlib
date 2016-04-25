@@ -3,6 +3,7 @@ namespace Schwaen\Stdlib;
 
 /**
  * ArrayUtils
+ * @namespace Schwaen\Stdlib
  */
 class ArrayUtils {
   /**
