@@ -38,6 +38,8 @@ class ArrayUtils {
   /**
    * Test whether an array contains one or more string keys
    *
+   * @access public
+   * @static
    * @param array $input
    * @param bool $only
    * @param bool $allow_empty Should an empty array() return true
@@ -56,6 +58,8 @@ class ArrayUtils {
   /**
    * Test whether an array contains one or more integer keys
    *
+   * @access public
+   * @static
    * @param array $input
    * @param bool $only
    * @param bool $allow_empty    Should an empty array() return true
