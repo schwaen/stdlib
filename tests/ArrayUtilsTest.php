@@ -52,4 +52,15 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals('Max', ArrayUtils::findValueByKeys($arr1, ['test', 'Name']));
     $this->assertEquals('Karl', ArrayUtils::findValueByKeys($arr1, ['test', 'test2'], 'Karl'));
   }
+
+  /**
+   * Test for Schwaen\Stdlib\ArrayUtils::flatten
+   */
+  public function testFlatten() {
+    $arr1 = ['name' => 'Sven', 'Name' => 'Max'];
+    $arr2 = ['a', [['b']],['c'],[[[['d']]]]];
+    $this->assertEquals($arr1, ArrayUtils::flatten($arr1, true));
+    $this->assertEquals(['Sven', 'Max'], ArrayUtils::flatten($arr1, false));
+    $this->assertEquals(['a', 'b', 'c', 'd'], ArrayUtils::flatten($arr2));
+  }
 }

@@ -9,8 +9,6 @@ class ArrayUtils {
   /**
    * Return the values from a single column in the input array
    *
-   * @access public
-   * @static
    * @param array $input
    * @param string|int $column_key
    * @param string $index_key
@@ -39,8 +37,6 @@ class ArrayUtils {
   /**
    * Test whether an array contains one or more string keys
    *
-   * @access public
-   * @static
    * @param array $input
    * @param bool $only
    * @param bool $allow_empty Should an empty array() return true
@@ -59,8 +55,6 @@ class ArrayUtils {
   /**
    * Test whether an array contains one or more integer keys
    *
-   * @access public
-   * @static
    * @param array $input
    * @param bool $only
    * @param bool $allow_empty    Should an empty array() return true
@@ -79,12 +73,10 @@ class ArrayUtils {
   /**
    * Returns the value of the first found key-name
    *
-   * @access public
-   * @static
    * @param array $input
    * @param array $keys
    * @param string $default
-   * @return Ambigous <string, unknown>
+   * @return mixed
    */
   public static function findValueByKeys(array $input, array $keys, $default = null) {
     $return = $default;
@@ -94,6 +86,23 @@ class ArrayUtils {
         break;
       }
     }
+    return $return;
+  }
+
+  /**
+   * Flatten a multi-dimensional aray into a one dimensional array
+   *
+   * @param array $input
+   * @param string $preserve_keys
+   * @return array
+   */
+  public static function flatten(array $input, $preserve_keys = false) {
+    $return = [];
+    $awr_func = $preserve_keys
+      ? function($v, $k) use(&$return) {$return[$k] = $v;}
+      : function($v) use(&$return) {$return[] = $v;}
+    ;
+    array_walk_recursive($input, $awr_func);
     return $return;
   }
 }
