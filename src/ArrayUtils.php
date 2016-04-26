@@ -3,9 +3,9 @@ namespace Schwaen\Stdlib;
 
 /**
  * ArrayUtils
- * @namespace Schwaen\Stdlib
  */
 class ArrayUtils {
+
   /**
    * Return the values from a single column in the input array
    *
@@ -16,7 +16,7 @@ class ArrayUtils {
    * @param string $index_key
    * @return null|array
    */
-  public static function column($input, $column_key, $index_key = null) {
+  public static function column(array $input, $column_key, $index_key = null) {
     $arr = array_map(function($d) use ($column_key, $index_key) {
       if(!isset($d[$column_key])) {
         return null;
@@ -46,7 +46,7 @@ class ArrayUtils {
    * @param bool $allow_empty Should an empty array() return true
    * @return bool
    */
-  public static function hasStringKeys($input, $only = false, $allow_empty = false) {
+  public static function hasStringKeys(array $input, $only = false, $allow_empty = false) {
     if(!is_array($input)) {
       return false;
     }
@@ -66,14 +66,34 @@ class ArrayUtils {
    * @param bool $allow_empty    Should an empty array() return true
    * @return bool
    */
-  public static function hasIntegerKeys($input, $only = false, $allow_empty = false) {
-    if (!is_array($input)) {
+  public static function hasIntegerKeys(array $input, $only = false, $allow_empty = false) {
+    if(!is_array($input)) {
       return false;
     }
-    if (!$input) {
+    if(!$input) {
       return $allow_empty;
     }
     return count(array_filter(array_keys($input), 'is_int')) > ($only ? count($input) : 0);
   }
 
+  /**
+   * Returns the value of the first found key-name
+   *
+   * @access public
+   * @static
+   * @param array $input
+   * @param array $keys
+   * @param string $default
+   * @return Ambigous <string, unknown>
+   */
+  public static function findValueByKeys(array $input, array $keys, $default = null) {
+    $return = $default;
+    foreach($keys as $key) {
+      if(isset($input[$key])) {
+        $return = $input[$key];
+        break;
+      }
+    }
+    return $return;
+  }
 }

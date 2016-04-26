@@ -42,4 +42,14 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals(false, ArrayUtils::hasIntegerKeys($array1, true));
     $this->assertEquals(true, ArrayUtils::hasIntegerKeys($array2));
   }
+
+  /**
+   * Test for Schwaen\Stdlib\ArrayUtils::findValueByKeys
+   */
+  public function testFindValueByKeys() {
+    $arr1 = ['name' => 'Sven', 'Name' => 'Max'];
+    $this->assertEquals(null, ArrayUtils::findValueByKeys($arr1, ['test', 'test2']));
+    $this->assertEquals('Max', ArrayUtils::findValueByKeys($arr1, ['test', 'Name']));
+    $this->assertEquals('Karl', ArrayUtils::findValueByKeys($arr1, ['test', 'test2'], 'Karl'));
+  }
 }
