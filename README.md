@@ -25,7 +25,6 @@ Supports
 -----------
 - [PSR-2](http://www.php-fig.org/psr/psr-2/)
 - [PSR-4](http://www.php-fig.org/psr/psr-4/)
-
 - PHP 5.4
 - PHP 5.5
 - PHP 5.6
