@@ -3,7 +3,8 @@ namespace Schwaen\Stdlib;
 /**
  * DateTimeUtils
  */
-class DateTimeUtils {
+class DateTimeUtils
+{
 
   /**
    * seconds per minute
