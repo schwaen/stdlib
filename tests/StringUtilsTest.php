@@ -32,4 +32,26 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
         StringUtils::splitOnLowerCase(28);
         StringUtils::splitOnLowerCase(['test1', 'test2']);
     }
+
+    /**
+     * Test for Schwaen\Stdlib\StringUtils::startsWith
+     */
+    public function testStartsWith()
+    {
+        $this->assertEquals(false, StringUtils::startsWith('Hallo Welt', 'hallo'));
+        $this->assertEquals(true, StringUtils::startsWith('Hallo Welt', 'Hallo'));
+        $this->assertEquals(false, StringUtils::startsWith('Hallo Welt', 'Test'));
+        $this->assertEquals(true, StringUtils::startsWith('Hallo Welt', ''));
+    }
+
+    /**
+     * Test for Schwaen\Stdlib\StringUtils::endsWith
+     */
+    public function testEndsWith()
+    {
+      $this->assertEquals(false, StringUtils::endsWith('Hallo Welt', 'welt'));
+      $this->assertEquals(true, StringUtils::endsWith('Hallo Welt', 'Welt'));
+      $this->assertEquals(false, StringUtils::endsWith('Hallo Welt', 'Test'));
+      $this->assertEquals(true, StringUtils::endsWith('Hallo Welt', ''));
+    }
 }
