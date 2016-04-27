@@ -1,5 +1,6 @@
 <?php
 namespace Schwaen\Stdlib;
+
 /**
  * DateTimeUtils
  */
