@@ -32,13 +32,13 @@ trait SingletonTrait
         $this->init();
     }
 
-      private function init()
-      {
-      }
-      final private function __clone()
-      {
-      }
-      final private function __wakeup()
-      {
-      }
+    private function init()
+    {
+    }
+    final private function __clone()
+    {
+    }
+    final private function __wakeup()
+    {
+    }
 }
