@@ -13,7 +13,7 @@ The best way to install this library is to use [composer](https://getcomposer.or
 ```json
 {
     "require-dev": {
-        "schwaen/stdlib": "0.*"
+        "schwaen/stdlib": "1.*"
     }
 }
 ```
