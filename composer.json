@@ -1,24 +1,29 @@
 {
-  "name": "schwaen/stdlib",
-  "description": "standard library for common php projects",
-  "version": "0.1.0",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {"name": "Sven Muhle", "email": "s.muhle@plajo.de"}
-  ],
-  "require": {
-    "php": ">=5.4.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "4.8.*"
-  },
-  "autoload": {
-    "psr-4": {
-      "Schwaen\\Stdlib\\": "src/"
+    "name": "schwaen/stdlib",
+    "description": "standard library for common php projects",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {"name": "Sven Muhle", "email": "s.muhle@plajo.de"}
+    ],
+    "require": {
+        "php": ">=5.4.0"
     },
-    "exclude-from-classmap": [
-      "tests/"
-    ]
-  }
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Schwaen\\Stdlib\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "tests/"
+        ]
+    },
+    "extra": {
+      "branch-alias": {
+          "dev-master": "1.1.0-dev"
+      }
+    }
 }
