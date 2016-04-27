@@ -6,7 +6,7 @@ install:
   - composer install
 script:
   - vendor/bin/phpunit
-  - ~/.composer/vendor/bin/php-cs-fixer fix --dry-run -v --diff src
+  - ~/.composer/vendor/bin/php-cs-fixer fix --dry-run --level=psr2 -v --diff src
 
 php:
   - 5.4
@@ -15,7 +15,5 @@ php:
   - 7.0
   - hhvm
 
-
 notifications:
   email: false
-  
