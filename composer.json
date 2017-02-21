@@ -8,7 +8,7 @@
         {"name": "Sven Muhle", "email": "s.muhle@plajo.de"}
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.8.*"
