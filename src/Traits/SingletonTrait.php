@@ -14,7 +14,7 @@ trait SingletonTrait
 
     /**
      * Return the instance of the used class
-     * @return \Schwaen\Stdlib\self
+     * @return self
      */
     public static function getInstance()
     {
