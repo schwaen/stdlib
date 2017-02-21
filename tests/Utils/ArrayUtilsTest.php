@@ -7,7 +7,7 @@ namespace Schwaen\Common\Utils;
 class ArrayUtilsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Test for Schwaen\Stdlib\ArrayUtils::column
+     * Test for Schwaen\Common\Utils\ArrayUtils::column
      */
     public function testColumn()
     {
@@ -23,7 +23,7 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for Schwaen\Stdlib\ArrayUtils::hasStringKeys
+     * Test for Schwaen\Common\Utils\ArrayUtils::hasStringKeys
      */
     public function testHasStringKeys()
     {
@@ -35,7 +35,7 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for Schwaen\Stdlib\ArrayUtils::hasStringKeys
+     * Test for Schwaen\Common\Utils\ArrayUtils::hasStringKeys
      */
     public function testHasIntegerKeys()
     {
@@ -47,7 +47,7 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for Schwaen\Stdlib\ArrayUtils::findValueByKeys
+     * Test for Schwaen\Common\Utils\ArrayUtils::findValueByKeys
      */
     public function testFindValueByKeys()
     {
@@ -58,7 +58,7 @@ class ArrayUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for Schwaen\Stdlib\ArrayUtils::flatten
+     * Test for Schwaen\Common\Utils\ArrayUtils::flatten
      */
     public function testFlatten()
     {

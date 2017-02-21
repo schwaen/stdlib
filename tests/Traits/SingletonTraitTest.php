@@ -15,7 +15,7 @@ class TestClassB
 class SingletonTraitTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Test for Schwaen\Common\Traits\SingletonTraitTest
+     * Test for Schwaen\Common\Utils\SingletonTrait
      */
     public function testTrait()
     {

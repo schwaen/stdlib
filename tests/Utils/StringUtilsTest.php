@@ -8,7 +8,7 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Test for Schwaen\Stdlib\StringUtils::splitOnUpperCase
+     * Test for Schwaen\Common\Utils\StringUtils::splitOnUpperCase
      */
     public function testSplitOnUpperCase()
     {
@@ -21,7 +21,7 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for Schwaen\Stdlib\StringUtils::splitOnLowerCase
+     * Test for Schwaen\Common\Utils\StringUtils::splitOnLowerCase
      */
     public function testSplitOnLowerCase()
     {
@@ -34,7 +34,7 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for Schwaen\Stdlib\StringUtils::startsWith
+     * Test for Schwaen\Common\Utils\StringUtils::startsWith
      */
     public function testStartsWith()
     {
@@ -45,7 +45,7 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for Schwaen\Stdlib\StringUtils::endsWith
+     * Test for Schwaen\Common\Utils\StringUtils::endsWith
      */
     public function testEndsWith()
     {
