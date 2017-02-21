@@ -1,5 +1,5 @@
 <?php
-namespace Schwaen\Stdlib;
+namespace Schwaen\Common\Utils;
 
 /**
  * StringUtils
@@ -47,7 +47,6 @@ class StringUtils
     {
         return $query === '' || substr($string, 0, strlen($query)) === $query;
     }
-
 
     /**
      * check if $string ends with $query

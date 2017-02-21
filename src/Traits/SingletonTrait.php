@@ -1,5 +1,5 @@
 <?php
-namespace Schwaen\Stdlib;
+namespace Schwaen\Common\Traits;
 
 /**
  * SingletonTrait

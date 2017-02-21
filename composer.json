@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Schwaen\\Stdlib\\": "src/"
+            "Schwaen\\Common\\": "src/"
         },
         "exclude-from-classmap": [
             "tests/"

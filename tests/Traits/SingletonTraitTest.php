@@ -1,5 +1,5 @@
 <?php
-namespace Schwaen\Stdlib;
+namespace Schwaen\Common\Traits;
 
 class TestClassA
 {
@@ -10,12 +10,12 @@ class TestClassB
     use SingletonTrait;
 }
 /**
- * SingletonTrait
+ * SingletonTraitTest
  */
 class SingletonTraitTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Test for Schwaen\Stdlib\SingletonTraitTest
+     * Test for Schwaen\Common\Traits\SingletonTraitTest
      */
     public function testTrait()
     {
