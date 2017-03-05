@@ -1,11 +1,15 @@
 <?php
 namespace Schwaen\Common\Utils;
 
+use Schwaen\Common\Traits\StaticClassTrait;
+
 /**
  * StringUtils
  */
 class StringUtils
 {
+    use StaticClassTrait;
+
     /**
      * Split a string on every UpperCase letter
      *

@@ -1,11 +1,15 @@
 <?php
 namespace Schwaen\Common\Utils;
 
+use Schwaen\Common\Traits\StaticClassTrait;
+
 /**
  * ArrayUtils
  */
 class ArrayUtils
 {
+    use StaticClassTrait;
+
     /**
      * Return the values from a single column in the input array
      *
@@ -16,6 +20,9 @@ class ArrayUtils
      */
     public static function column(array $input, $column_key, $index_key = null)
     {
+        if (function_exists('array_column')) {
+            return array_column($input, $column_key, $index_key);
+        }
         $arr = array_map(function ($d) use ($column_key, $index_key) {
         if (!isset($d[$column_key])) {
             return null;
@@ -109,5 +116,17 @@ class ArrayUtils
       ;
         array_walk_recursive($input, $awr_func);
         return $return;
+    }
+
+    public static function renameKey(array $input, $old_key, $new_key)
+    {
+        $ret = $input;
+        if (array_key_exists($old_key, $input)) {
+            $keys = array_keys($input);
+            $offset = array_search($old_key, $keys);
+            $keys[$offset] = $new_key;
+            $ret = array_combine($keys, $input);
+        }
+        return $ret;
     }
 }

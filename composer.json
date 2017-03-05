@@ -1,7 +1,6 @@
 {
     "name": "schwaen/stdlib",
     "description": "standard library for common php projects",
-    "version": "1.2.0",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -20,10 +19,5 @@
         "exclude-from-classmap": [
             "tests/"
         ]
-    },
-    "extra": {
-      "branch-alias": {
-          "dev-master": "1.3.0-dev"
-      }
     }
 }

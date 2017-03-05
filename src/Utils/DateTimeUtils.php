@@ -1,11 +1,15 @@
 <?php
 namespace Schwaen\Common\Utils;
 
+use Schwaen\Common\Traits\StaticClassTrait;
+
 /**
  * DateTimeUtils
  */
 class DateTimeUtils
 {
+    use StaticClassTrait;
+
     /**
      * seconds per minute
      * @var int

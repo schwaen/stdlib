@@ -1,11 +1,15 @@
 <?php
 namespace Schwaen\Common\Utils;
 
+use Schwaen\Common\Traits\StaticClassTrait;
+
 /**
  * ObjectUtils
  */
 class ObjectUtils
 {
+    use StaticClassTrait;
+
     /**
      * Get all constants of the given $class or object.
      * Constant name in key, constant value in value.
